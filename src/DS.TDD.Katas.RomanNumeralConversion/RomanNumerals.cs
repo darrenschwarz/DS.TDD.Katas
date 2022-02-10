@@ -5,8 +5,8 @@ namespace DS.TDD.Katas.RomanNumeralConversion
 {
     public class RomanNumerals
     {
-        private static List<int> _integers = new List<int>(){50, 40, 10, 9, 5, 4, 1};
-        private static List<string> _romanNumerals = new List<string>() { "L", "XL", "X", "IX", "V", "IV", "I" };
+        private static readonly List<int> IntegerList = new List<int>(){50, 40, 10, 9, 5, 4, 1};
+        private static readonly List<string> RomanNumeralList = new List<string>() { "L", "XL", "X", "IX", "V", "IV", "I" };
 
         public static string FromInteger(int integer)
         {
@@ -15,9 +15,9 @@ namespace DS.TDD.Katas.RomanNumeralConversion
             var converted = new StringBuilder();
             var integerToConvert = integer;
 
-            for (int i = 0; i < _integers.Count; i++)
+            for (var i = 0; i < IntegerList.Count; i++)
             {
-                integerToConvert = AppendToConverted(converted, integerToConvert, _integers[i], _romanNumerals[i]);
+                integerToConvert = AppendToConverted(converted, integerToConvert, IntegerList[i], RomanNumeralList[i]);
             }
 
             return converted.ToString() ;
