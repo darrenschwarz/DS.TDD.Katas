@@ -32,5 +32,14 @@ namespace DS.TDD.Katas.RomanNumeralConversion.UnitTests
         {
             Assert.True(romanNumerals.Equals(RomanNumerals.FromInteger(integer)));
         }
+
+        [Theory]
+        [InlineData(0, "")]
+        [InlineData(-1, "")]
+        [InlineData(51, "LI")]
+        public void IntegersZeroOrLowerAndGreaterThanFiftyThrowAnArgumentOutOfRangeException(int integer, string romanNumerals)
+        {
+            Assert.Throws<ArgumentOutOfRangeException>(() => romanNumerals.Equals(RomanNumerals.FromInteger(integer)));
+        }
     }
 }
