@@ -8,13 +8,15 @@ namespace DS.TDD.Katas.RomanNumeralConversion
         public static string FromInteger(int integer)
         {
             var converted = new StringBuilder();
+            var integerToConvert = integer;
 
-            if (integer >= 4)
+            if (integerToConvert >= 4)
             {
-                return "IV";
+                converted.Append("IV");
+                integerToConvert -= 4;
             }
 
-            for (int i = 0; i < integer; i++)
+            for (int i = 0; i < integerToConvert; i++)
             {
                 converted.Append("I");
             }
