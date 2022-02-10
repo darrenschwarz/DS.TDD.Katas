@@ -5,8 +5,8 @@ namespace DS.TDD.Katas.RomanNumeralConversion
 {
     public class RomanNumerals
     {
-        private static List<int> _integers = new List<int>(){40, 10, 9, 5, 4, 1};
-        private static List<string> _romanNumerals = new List<string>() { "XL", "X", "IX", "V", "IV", "I" };
+        private static List<int> _integers = new List<int>(){50, 40, 10, 9, 5, 4, 1};
+        private static List<string> _romanNumerals = new List<string>() { "L", "XL", "X", "IX", "V", "IV", "I" };
 
         public static string FromInteger(int integer)
         {
@@ -33,7 +33,5 @@ namespace DS.TDD.Katas.RomanNumeralConversion
 
             return currentIntegerToConvert;
         }
-
-        
     }
 }
