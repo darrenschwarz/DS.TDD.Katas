@@ -25,6 +25,7 @@ namespace DS.TDD.Katas.RomanNumeralConversion.UnitTests
         [InlineData(18, "XVIII")]
         [InlineData(19, "XIX")]
         [InlineData(20, "XX")]
+        [InlineData(40, "XL")]
         public void IntegerIsConvertedToRomanNumerals(int integer, string romanNumerals)
         {
             Assert.True(romanNumerals.Equals(RomanNumerals.FromInteger(integer)));
