@@ -9,6 +9,11 @@ namespace DS.TDD.Katas.RomanNumeralConversion
         {
             var converted = new StringBuilder();
 
+            if (integer >= 4)
+            {
+                return "IV";
+            }
+
             for (int i = 0; i < integer; i++)
             {
                 converted.Append("I");
