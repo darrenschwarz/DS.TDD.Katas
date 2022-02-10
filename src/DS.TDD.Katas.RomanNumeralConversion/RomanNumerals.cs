@@ -10,6 +10,8 @@ namespace DS.TDD.Katas.RomanNumeralConversion
 
         public static string FromInteger(int integer)
         {
+            if (integer <= 0 || integer > 50)
+                throw new ArgumentOutOfRangeException($"{nameof(integer)}: {integer}");
             var converted = new StringBuilder();
             var integerToConvert = integer;
 
