@@ -15,6 +15,16 @@ namespace DS.TDD.Katas.RomanNumeralConversion.UnitTests
         [InlineData(8, "VIII")]
         [InlineData(9, "IX")]
         [InlineData(10, "X")]
+        [InlineData(11, "XI")]
+        [InlineData(12, "XII")]
+        [InlineData(13, "XIII")]
+        [InlineData(14, "XIV")]
+        [InlineData(15, "XV")]
+        [InlineData(16, "XVI")]
+        [InlineData(17, "XVII")]
+        [InlineData(18, "XVIII")]
+        [InlineData(19, "XIX")]
+        [InlineData(20, "XX")]
         public void IntegerIsConvertedToRomanNumerals(int integer, string romanNumerals)
         {
             Assert.True(romanNumerals.Equals(RomanNumerals.FromInteger(integer)));
