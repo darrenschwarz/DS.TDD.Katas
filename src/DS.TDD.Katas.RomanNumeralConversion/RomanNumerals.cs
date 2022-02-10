@@ -4,7 +4,7 @@
     {
         public static string FromInteger(int integer)
         {
-            throw new NotImplementedException();
+            return "I";
         }
     }
 }
