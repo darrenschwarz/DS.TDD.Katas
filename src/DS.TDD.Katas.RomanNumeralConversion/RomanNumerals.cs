@@ -9,13 +9,11 @@ namespace DS.TDD.Katas.RomanNumeralConversion
         {
             var converted = new StringBuilder();
 
-            if (integer >= 2)
+            for (int i = 0; i < integer; i++)
             {
                 converted.Append("I");
             }
-
-            converted.Append("I");
-
+            
             return converted.ToString() ;
         }
     }
